@@ -1,0 +1,119 @@
+--NUMPY--
+
+Core Library for scientific computing in Python
+
+- Data Sience, Machine Learning, Deep Learning
+- scikit-learn, matplotlib, pandas,...
+- written in C  (Fast)
+
+--Arrays vs List--
+
+-You can directly append to a list but in array you can only do it by concat
+
+-Array operations works elementwise
+
+-Operations in NumPy arrays a lot faster than normal python lists
+
+$ a.shape
+$ np.diag(a)
+
+-Dot Product
+
+$ np.dot()
+$ a1 @ a2
+
+-Linear Algebra
+
+$ np.linalg.inv()
+$ np.linalg.det()
+
+-Indexing, Slicing, finding even numbers
+
+$ np.array()
+$ np.where()
+$ np.argwhere().flatten()
+
+$ a.sum()
+$ a.mean(axis=None)
+$ a.max(axis=None)
+
+-Concat
+
+$ a = np.array([[1,2],[3,4]])
+$ print(a)
+
+$ b = np.array([[5,6]])
+
+$ c = np.concatenate((a,b), axis=None)  # appended all elements on b
+$ print(c)
+
+$ c = np.concatenate((a,b.T), axis=1)
+$ print(c)
+
+---
+
+$ a = np.array([1,2,3,4])
+$ b = np.array([5,6,7,8])
+# hstack, vstack
+$ c = np.hstack((a,b))  # horizontally
+$ print(c)
+$ c = np.vstack((a,b))  # vertically
+$ print(c)
+
+-Broadcasting
+
+$ x = np.array([[1,2,3],[4,5,6],[1,2,3],[4,5,6]])
+$ a = np.array([1,0,1])  
+$ y = x + a  # applies for all rows
+$ print(y)
+
+-Generating Arrays
+
+$ a = np.zeros([2,3])  # zeros 2 by 3
+$ print(a)
+
+$ a = np.ones([2,3])  # ones 2 by 3
+$ print(a)
+
+$ a = np.full([2,3], 5.0)  # fives 2 by 3
+$ print(a)
+
+$ a = np.eye(3)  # ones diagonal (I)
+$ print(a)
+
+$ a = np.arange(20)  # 1 to 19
+$ print(a)
+
+$ a = np.linspace(0,10,5)  # start stop step
+$ print(a)
+
+-Random Numbers
+
+$ a = np.random.random((3,2)) # 0-1
+$ print(a)
+
+$ a = np.random.randn(1000) #normal/Gaussian
+$ print(a.mean(),a.var())
+
+$ a = np.random.randint(10,size=(3,3))
+$ print(a)
+
+$ a = np.random.choice(5, size=10)
+$ print(a)
+
+$ a = np.random.choice([-8,-7,-6], size=10)
+$ print(a)
+
+-Loading CSV Files
+
+# np.loadtxt()
+$ data = np.genfromtxt('hw_200.csv', delimiter=" ", dtype=np.float32)
+$ print(data.shape)
+
+
+
+
+
+
+
+
